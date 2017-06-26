@@ -11,7 +11,7 @@ fi
 which virtualenv
 if [ $? -ne 0 ]; then
 	echo "INFO: Installing virtualenv"
-	pip install virtualenv
+	pip3 install virtualenv
 fi
 
 if [ ! -d .venv ]; then
@@ -22,6 +22,6 @@ fi
 echo "Activating virtual environment"
 source .venv/bin/activate
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo "DONE"

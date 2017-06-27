@@ -25,4 +25,6 @@ The second notebook ([`comparing-models`](https://github.com/davified/learn-scik
 		- matplotlib
 		- sklearn
 
-3. Start the notebook: `jupyter notebook`
+3. source .venv/bin/activate
+
+4. Start the notebook: `jupyter notebook`

@@ -4,19 +4,13 @@
 
 which python3
 if [ $? -ne 0 ]; then
-	echo "INFO: Installing python 3"
-	brew install python3
-fi
-
-which virtualenv
-if [ $? -ne 0 ]; then
-	echo "INFO: Installing virtualenv"
-	pip3 install virtualenv
+  echo "INFO: Installing python 3"
+  brew install python3
 fi
 
 if [ ! -d .venv ]; then
-	echo "INFO: Creating virtual env folder in current directory"
-  virtualenv -p python3 .venv
+  echo "INFO: Creating virtual env folder in current directory"
+  python3 -m venv .venv
 fi
 
 echo "Activating virtual environment"

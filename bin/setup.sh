@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# set -e
+set -e
 
 if [[ `which brew` ]]; then
   echo "OK Found homebrew!"
@@ -9,8 +9,9 @@ else
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
 
-which python3 >/dev/null
-if [ $? -ne 0 ]; then
+if [[ `which python3` ]]; then
+  echo "OK Found python3!"
+else
   echo "INFO: Installing python 3"
   brew install python3
 fi
@@ -24,8 +25,7 @@ echo "Activating virtual environment"
 source .venv/bin/activate
 
 echo "Installing python libraries"
-pip3 install -r requirements.txt
-
+pip install -r requirements.txt
 
 echo "Adding virtual environment to jupyter notebook"
 project_name=$(basename $(pwd))

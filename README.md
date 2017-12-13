@@ -29,4 +29,6 @@ The [`4-comparing-models`](https://github.com/davified/learn-scikit-learn/blob/m
 
 4. Start the notebook: `jupyter notebook` (if you're not familiar with jupyter notebook, it's just an IDE. You can refer to the [cheatsheet](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/))
 
-5. To exit the virtual environment, run `deactivate`
+5. When prompted, select learn-scikit-learn as your jupyter kernel
+
+6. At the end of the session, stop the Jupyter server by hitting Ctrl-C in your terminal. To exit the virtual environment, run `deactivate`

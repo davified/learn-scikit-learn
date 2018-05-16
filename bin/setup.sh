@@ -18,7 +18,7 @@ else
     echo "[INFO] Downloading anaconda installation script..."
     echo "[INFO] This is a 511MB file and will some time to complete..."
     echo "downloading 511mb file"
-    # curl https://repo.anaconda.com/archive/Anaconda3-5.1.0-MacOSX-x86_64.sh -o ./anaconda3.sh
+    curl https://repo.anaconda.com/archive/Anaconda3-5.1.0-MacOSX-x86_64.sh -o ./anaconda3.sh
   fi
 
   echo "[INFO] Running anaconda installation script..."

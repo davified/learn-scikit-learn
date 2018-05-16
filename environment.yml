@@ -1,0 +1,11 @@
+name: ml-101
+dependencies:
+  - python=3.6
+  - pandas=0.19.2
+  - numpy
+  - matplotlib=2.0.0
+  - scikit-learn
+  - jupyter=5.5.0
+  - scipy
+  - pip:
+    - imblearn

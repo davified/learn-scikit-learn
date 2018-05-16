@@ -19,13 +19,14 @@ else
 fi
 export PATH="$HOME/anaconda3/bin:$PATH"
 
-# Update conda
-# conda update conda
-
-conda env create -f ./environment.yml
+if [[ ! -d "${HOME}/anaconda3/envs/ml-101" ]]; then
+  echo "[INFO] Creating ml-101 virtual environment and installing dependencies..."
+  conda env create -f ./environment.yml
+else 
+  echo "[INFO] Installing dependencies..."
+  conda env update
+fi
 
 echo "[INFO] Done!"
 echo "[INFO] To activate the virtual environment, run: source activate ml-101"
 echo "[INFO] To deactivate the virtual environment, run: source deactivate"
-
-

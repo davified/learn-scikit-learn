@@ -2,6 +2,14 @@
 
 set -e
 
+if [[ $OSTYPE == "darwin"* ]]; then
+  echo "[INFO] Non-Mac OSX operating system detected"
+  echo "[TODO] Open http://continuum.io/downloads with your web browser"
+  echo "[TODO] Download the Python 3 installer for your OS"
+  echo "[TODO] Install Python 3 using all of the defaults for installation, except make sure to check 'Make Anaconda the default Python'"
+  echo "[INFO] Exiting..."
+  exit 0
+fi
 
 if [[ `which conda` ]]; then
   echo "[INFO] OK Found conda!"
@@ -10,13 +18,10 @@ else
   echo "[INFO] This is a 511MB file and will some time to complete..."
   curl https://repo.anaconda.com/archive/Anaconda3-5.1.0-MacOSX-x86_64.sh -o ./anaconda3.sh
 
-
   echo "[INFO] Running anaconda installation script..."
   bash anaconda3.sh -b -p ~/anaconda3
-
-# echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bash_profile 
-# source .bash_profile
 fi
+
 export PATH="$HOME/anaconda3/bin:$PATH"
 
 if [[ ! -d "${HOME}/anaconda3/envs/ml-101" ]]; then

@@ -26,5 +26,6 @@ conda env create -f ./environment.yml
 
 echo "[INFO] Done!"
 echo "[INFO] To activate the virtual environment, run: source activate ml-101"
+echo "[INFO] To deactivate the virtual environment, run: source deactivate"
 
 

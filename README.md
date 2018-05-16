@@ -14,21 +14,16 @@ The [`4-comparing-models`](https://github.com/davified/learn-scikit-learn/blob/m
 
 2. Run `./bin/setup.sh` (read it before running!). Under the hood, this will:
 
-	- Install python3
+	- Install anaconda (for python3)
 
 	- Create a virtualenv folder in repo to store the dependencies in the next bullet
 
-	- Install dependencies
-		- jupyter
-		- pandas
-		- numpy
-		- matplotlib
-		- sklearn
+	- Install dependencies listed in `environment.yml`
 
-3. To activate the virtual environment, run `source .venv/bin/activate`
+3. To activate the virtual environment, run `source activate ml-101`
 
 4. Start the notebook: `jupyter notebook` (if you're not familiar with jupyter notebook, it's just an IDE. You can refer to the [cheatsheet](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/))
 
-5. When prompted, select learn-scikit-learn as your jupyter kernel
+5. If prompted, select ml-101 as your jupyter kernel
 
-6. At the end of the session, stop the Jupyter server by hitting Ctrl-C in your terminal. To exit the virtual environment, run `deactivate`
+6. At the end of the session, stop the Jupyter server by hitting Ctrl-C in your terminal. To exit the virtual environment, run `source deactivate`

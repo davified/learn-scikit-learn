@@ -13,11 +13,8 @@ The [`4-comparing-models`](https://github.com/davified/learn-scikit-learn/blob/m
 1. Clone the repo and `cd` into the directory: `git clone github.com/davified/learn-scikit-learn && cd learn-scikit-learn`
 
 2. Run `./bin/setup.sh` (read it before running!). Under the hood, this will:
-
 	- Install anaconda (for python3)
-
-	- Create a virtualenv folder in repo to store the dependencies in the next bullet
-
+	- Create a virtual environment
 	- Install dependencies listed in `environment.yml`
 
 3. To activate the virtual environment, run `source activate ml-101`

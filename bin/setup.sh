@@ -11,6 +11,13 @@ if [[ $OSTYPE != "darwin"* ]]; then
   exit 0
 fi
 
+export PATH="$HOME/anaconda3/bin:$PATH"
+echo "[INFO] Adding anaconda bin path to current session"
+if [[ -f ~/.zshrc ]]; then
+  echo "[INFO] Adding anaconda bin path to ~/.zshrc config file"
+  grep -q -F 'export PATH="$HOME/anaconda3/bin:$PATH"' ~/.zshrc || echo 'export PATH="$HOME/anaconda3/bin:$PATH"' >> ~/.zshrc
+fi
+
 if [[ `which conda` ]]; then
   echo "[INFO] OK Found conda!"
 else
@@ -24,8 +31,6 @@ else
   echo "[INFO] Running anaconda installation script..."
   bash anaconda3.sh -b -p ~/anaconda3
 fi
-
-export PATH="$HOME/anaconda3/bin:$PATH"
 
 if [[ ! -d "${HOME}/anaconda3/envs/ml-101" ]]; then
   echo "[INFO] Creating ml-101 virtual environment and installing dependencies..."
